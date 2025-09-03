@@ -33,7 +33,7 @@ model Product {
   type        Type
   category    Category      @relation(fields: [categoryId], references: [id])
   categoryId  String
-  producImage producImage[]
+  productImage productImage[]
 
   @@index([type])
 }
@@ -54,7 +54,7 @@ enum Type {
   premium
 }
 
-model producImage {
+model productImage {
   id        Int     @id @default(autoincrement())
   url       String
   product   Product @relation(fields: [productId], references: [id])

@@ -3,7 +3,7 @@ import prisma from '../lib/prisma';
 
 async function main() {
   // 1. Borrar registros previos
-  await prisma.producImage.deleteMany();
+  await prisma.productImage.deleteMany();
   await prisma.product.deleteMany();
   await prisma.category.deleteMany();
   
@@ -54,7 +54,7 @@ async function main() {
       productId: dbProduct.id
     }));
 
-    await prisma.producImage.createMany({
+    await prisma.productImage.createMany({
       data: imagesData
     });
   });
