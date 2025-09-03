@@ -9,13 +9,12 @@
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
-
 
 .swiper {
   width: 100%;
-  height: 900px;
+  height: 600px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -24,7 +23,6 @@
   background-size: cover;
   background-position: center;
 }
-
 
 .mySwiper {
   height: 20%;
@@ -42,9 +40,27 @@
   opacity: 1;
 }
 
-.swiper-slide img {
+.mySwiper .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+}
+
+/* Estilos específicos para el slideshow principal */
+.mySwiper2 {
+  height: 500px;
+  margin-bottom: 20px;
+}
+
+.mySwiper2 .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mySwiper2 .swiper-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }

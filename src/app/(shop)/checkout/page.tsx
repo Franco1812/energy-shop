@@ -32,17 +32,15 @@ export default function () {
               productsInCart.map( product => (
 
                 <div key={ product.slug } className="flex mb-5">
-                  <Image
-                    src={ `/products/${ product.images[ 0 ] }` }
-                    width={ 100 }
-                    height={ 100 }
-                    style={ {
-                      width: '100px',
-                      height: '100px'
-                    } }
-                    alt={ product.title }
-                    className="mr-5 rounded"
-                  />
+                  <div className="w-24 h-24 bg-transparent rounded flex items-center justify-center mr-5">
+                    <Image
+                      src={ `/products/${ product.images[ 0 ] }` }
+                      width={ 100 }
+                      height={ 100 }
+                      alt={ product.title }
+                      className="w-full h-full object-contain rounded"
+                    />
+                  </div>
 
                   <div>
                     <p>{ product.title }</p>
