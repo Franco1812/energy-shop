@@ -8,17 +8,18 @@ interface SeedProduct {
     tags: string[];
     title: string;
     type: ValidTypes;
-    gender: 'classic'|'sugar-free'|'gamer'|'premium'
 }
 
 type ValidSizes = '250ml'|'355ml'|'473ml'|'500ml'|'710ml';
 type ValidTypes = 'classic'|'sugar-free'|'zero'|'gaming'|'premium';
 
 interface SeedData {
+    categories: ValidTypes[],
     products: SeedProduct[],
 }
 
 export const initialData: SeedData = {
+    categories: ['classic', 'sugar-free', 'zero', 'gaming', 'premium'],
     products: [
         {
             description: "Monster Energy Classic es la bebida energética perfecta para cuando necesitas energía extra. Con una mezcla única de cafeína, taurina y vitaminas B, te dará el impulso que necesitas para superar cualquier desafío.",
@@ -32,8 +33,7 @@ export const initialData: SeedData = {
             slug: "monster_energy_classic",
             type: 'classic',
             tags: ['monster', 'energia', 'cafeina'],
-            title: "Monster Energy Classic",
-            gender: 'classic'
+            title: "Monster Energy Classic"
         },
         {
             description: "Red Bull Classic te da alas. La bebida energética original que inició toda una categoría. Con cafeína natural, taurina, vitaminas B y azúcar de verdad para darte la energía que necesitas.",
@@ -47,8 +47,7 @@ export const initialData: SeedData = {
             slug: "red_bull_classic",
             type: 'classic',
             tags: ['redbull', 'energia', 'cafeina'],
-            title: "Red Bull Classic",
-            gender: 'classic'
+            title: "Red Bull Classic"
         },
         {
             description: "Monster Energy Zero Ultra White combina un sabor refrescante y ligero con la potencia completa de Monster Energy. Sin azúcar, sin calorías, pero con toda la energía que esperas de Monster.",
@@ -62,8 +61,7 @@ export const initialData: SeedData = {
             slug: "monster_zero_ultra_white",
             type: 'zero',
             tags: ['monster', 'zero', 'sin-azucar'],
-            title: "Monster Zero Ultra White",
-            gender: 'sugar-free'
+            title: "Monster Zero Ultra White"
         },
         {
             description: "Monster Energy Zero Ultra Blue es una bebida energética refrescante con sabor a frambuesa azul. Cero azúcar, cero calorías, pero con toda la potencia de Monster Energy.",
@@ -77,8 +75,7 @@ export const initialData: SeedData = {
             slug: "monster_zero_ultra_blue",
             type: 'zero',
             tags: ['monster', 'ultra', 'frambuesa'],
-            title: "Monster Zero Ultra Blue",
-            gender: 'sugar-free'
+            title: "Monster Zero Ultra Blue"
         },
         {
             description: "Monster Energy Zero Ultra Black es una bebida energética con sabor intenso y audaz. Cero azúcar, cero calorías, pero con toda la energía Monster que esperas.",
@@ -92,8 +89,7 @@ export const initialData: SeedData = {
             slug: "monster_zero_ultra_black",
             type: 'zero',
             tags: ['monster', 'ultra', 'intenso'],
-            title: "Monster Zero Ultra Black",
-            gender: 'sugar-free'
+            title: "Monster Zero Ultra Black"
         },
         {
             description: "Monster Energy Gold Zero es una bebida energética premium con sabor dorado. Cero azúcar, cero calorías, pero con toda la energía Monster que necesitas.",
@@ -107,8 +103,7 @@ export const initialData: SeedData = {
             slug: "monster_gold_zero",
             type: 'zero',
             tags: ['monster', 'gold', 'premium'],
-            title: "Monster Energy Gold Zero",
-            gender: 'premium'
+            title: "Monster Energy Gold Zero"
         },
         {
             description: "Monster Energy Mango Loco combina el sabor tropical del mango con la potencia de Monster Energy. Una explosión de sabor frutal con toda la energía que necesitas.",
@@ -122,8 +117,7 @@ export const initialData: SeedData = {
             slug: "monster_mango_loco",
             type: 'classic',
             tags: ['monster', 'mango', 'tropical'],
-            title: "Monster Energy Mango Loco",
-            gender: 'classic'
+            title: "Monster Energy Mango Loco"
         },
         {
             description: "Monster Energy Anana es una bebida energética con sabor a piña tropical. Refrescante y energética, perfecta para días calurosos.",
@@ -138,7 +132,6 @@ export const initialData: SeedData = {
             type: 'classic',
             tags: ['monster', 'anana', 'piña', 'tropical'],
             title: "Monster Energy Anana",
-            gender: 'classic'
         },
         {
             description: "Monster Energy Rehab es una bebida energética diseñada para la recuperación. Con electrolitos y menos cafeína, perfecta para después del entrenamiento.",
@@ -153,7 +146,6 @@ export const initialData: SeedData = {
             type: 'gaming',
             tags: ['monster', 'rehab', 'recuperacion', 'electrolitos'],
             title: "Monster Energy Rehab",
-            gender: 'gamer'
         },
         {
             description: "Monster Energy Lemonade es una bebida energética refrescante con sabor a limonada natural. Perfecta para días calurosos con toda la energía de Monster.",
@@ -168,7 +160,6 @@ export const initialData: SeedData = {
             type: 'classic',
             tags: ['monster', 'limonada', 'refrescante'],
             title: "Monster Energy Lemonade",
-            gender: 'classic'
         },
         {
             description: "Monster Energy Irish Creme es una bebida energética con sabor a crema irlandesa. Una experiencia única de sabor con toda la potencia de Monster Energy.",
@@ -183,7 +174,6 @@ export const initialData: SeedData = {
             type: 'premium',
             tags: ['monster', 'irish-creme', 'premium'],
             title: "Monster Energy Irish Creme",
-            gender: 'premium'
         },
         {
             description: "Monster Energy Lewis Hamilton Edition es una bebida energética especial diseñada en colaboración con el campeón de F1. Con sabor único y diseño exclusivo.",
@@ -198,7 +188,6 @@ export const initialData: SeedData = {
             type: 'premium',
             tags: ['monster', 'lewis-hamilton', 'f1'],
             title: "Monster Energy Lewis Hamilton",
-            gender: 'premium'
         },
         {
             description: "Monster Energy Lando Norris Edition es una bebida energética especial con el piloto de McLaren. Diseño exclusivo y sabor único para los fans de la F1.",
@@ -213,7 +202,6 @@ export const initialData: SeedData = {
             type: 'premium',
             tags: ['monster', 'lando-norris', 'f1'],
             title: "Monster Energy Lando Norris",
-            gender: 'premium'
         },
         {
             description: "Red Bull Berry Edition combina el sabor único de Red Bull con notas de bayas refrescantes. Una experiencia de sabor completamente nueva con la energía de siempre.",
@@ -228,7 +216,6 @@ export const initialData: SeedData = {
             type: 'classic',
             tags: ['redbull', 'berry', 'edition'],
             title: "Red Bull Berry Edition",
-            gender: 'classic'
         },
         {
             description: "Red Bull Coconut Edition combina el sabor único de Red Bull con notas de coco tropical. Una experiencia de sabor exótica con la energía que necesitas.",
@@ -243,7 +230,6 @@ export const initialData: SeedData = {
             type: 'classic',
             tags: ['redbull', 'coconut', 'tropical'],
             title: "Red Bull Coconut Edition",
-            gender: 'classic'
         },
         {
             description: "Red Bull Uva Edition combina el sabor único de Red Bull con notas de uva refrescante. Una experiencia de sabor frutal con la energía que necesitas.",
@@ -258,7 +244,6 @@ export const initialData: SeedData = {
             type: 'classic',
             tags: ['redbull', 'uva', 'frutal'],
             title: "Red Bull Uva Edition",
-            gender: 'classic'
         },
         {
             description: "Bang Energy es una bebida energética súper potente diseñada especialmente para gamers y atletas. Con 300mg de cafeína y cero azúcar para máximo rendimiento.",
@@ -273,7 +258,6 @@ export const initialData: SeedData = {
             type: 'gaming',
             tags: ['bang', 'gaming', 'performance'],
             title: "Bang Energy",
-            gender: 'gamer'
         },
         {
             description: "G Fuel Blue Ice es la bebida energética de los esports profesionales. Formulada especialmente para gamers con ingredientes que mejoran el enfoque y la concentración.",
@@ -288,7 +272,6 @@ export const initialData: SeedData = {
             type: 'gaming',
             tags: ['gfuel', 'gaming', 'esports'],
             title: "G Fuel Blue Ice",
-            gender: 'gamer'
         },
         {
             description: "G Fuel es la bebida energética oficial de los esports. Formulada con ingredientes premium para maximizar el rendimiento gaming y la concentración.",
@@ -303,7 +286,6 @@ export const initialData: SeedData = {
             type: 'gaming',
             tags: ['gfuel', 'gaming', 'esports'],
             title: "G Fuel Classic",
-            gender: 'gamer'
         },
         {
             description: "Reign Total Body Fuel es una bebida energética fitness con 300mg de cafeína natural, BCAA y electrolitos. Perfecta para entrenamientos intensos.",
@@ -318,7 +300,6 @@ export const initialData: SeedData = {
             type: 'gaming',
             tags: ['reign', 'fitness', 'bcaa'],
             title: "Reign Total Body Fuel",
-            gender: 'gamer'
         },
         {
             description: "C4 Energy es una bebida energética sin azúcar formulada con ingredientes de rendimiento para maximizar tu entrenamiento. Perfecta para pre-workout.",
@@ -333,7 +314,6 @@ export const initialData: SeedData = {
             type: 'gaming',
             tags: ['c4', 'preworkout', 'performance'],
             title: "C4 Energy",
-            gender: 'gamer'
         },
         {
             description: "Java Bean Monster Energy combina el sabor del café con la potencia de Monster Energy. Perfecta para los amantes del café que buscan energía extra.",
@@ -348,7 +328,6 @@ export const initialData: SeedData = {
             type: 'premium',
             tags: ['monster', 'java', 'cafe'],
             title: "Monster Energy Java Bean",
-            gender: 'premium'
         }
     ]
 }
