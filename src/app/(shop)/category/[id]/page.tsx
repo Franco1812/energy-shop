@@ -14,12 +14,14 @@ interface Props {
 export default function({ params }: Props) {
 
   const { id } = params;
-  const products = seedProducts.filter( product => product.gender === id );
+  const effectiveCategory: Category = id === 'sugar-free' ? 'zero' : id;
+  const products = seedProducts.filter( product => product.gender === effectiveCategory );
 
   const labels: Record<Category, string>  = {
     'classic': 'Clásicas',
     'sugar-free': 'Sin Azúcar',
-    'gamer': 'Gaming',
+    'zero': 'Sin Azúcar',
+    'gaming': 'Gaming',
     'premium': 'Premium'
   }
 
